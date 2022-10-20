@@ -1,5 +1,34 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </header>
+
+        <article>
+        {% for post in posts %}
+            {{ post }}
+        {% endfor %}
+        </article>
+
+        {% for post in posts %}
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+        {% endfor %}
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
 <body>
     <header>
         <nav>
@@ -35,25 +64,4 @@
         <time>10:43</time> defines a specific time (or datetime)
     </footer> defines a footer for a document or section
 </body>
-</html>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </header>
-
-        <article>
-        {% for post in posts %}
-            {{ post }}
-        {% endfor %}
-        </article>
-
-        <article>
-            {{ posts }}
-        </article>
-    </body>
 </html>
