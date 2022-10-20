@@ -12,6 +12,7 @@ class Post(models.Model):
     text = models.TextField()
     # this is a date and time.
     created_date = models.DateTimeField(default=timezone.now)
+    # this is the published date
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
