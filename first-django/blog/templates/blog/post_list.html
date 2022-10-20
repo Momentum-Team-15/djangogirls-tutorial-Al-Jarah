@@ -47,7 +47,9 @@
         </header>
 
         <article>
-            {{ posts }}
+        {% for post in posts %}
+            {{ post }}
+        {% endfor %}
         </article>
 
         <article>
